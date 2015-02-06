@@ -147,7 +147,7 @@ F-score for neg is 0.7482014
 
 # Question 3
 
-If only 10% of the training data is used
+If only 10% of the training data is used:
 
 # For Naive Bayes
 
@@ -211,3 +211,5 @@ Recall for neg is
 F-score for pos is 
 F-score for neg is 
 
+We can see that Precision, Recall, F-score almost all decrease comparing with using the whole train dataset (except the Recall for ham in Naive Bayes), 
+which means using more data can increase accuracy rate in some degree. 
