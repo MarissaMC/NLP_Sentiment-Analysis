@@ -1,3 +1,6 @@
+<snippet>
+  <content><![CDATA[
+# ${1:Sentiment Analysis Spam filter}
 ------------------------------------------------------------------------------
 Created by Mengchun Wu, 2/4/2015
 ## Motivation
@@ -207,3 +210,7 @@ Recall for neg is
 
 F-score for pos is 
 F-score for neg is 
+
+]]></content>
+  <tabTrigger>readme</tabTrigger>
+</snippet>
