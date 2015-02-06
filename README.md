@@ -193,23 +193,23 @@ F-score for neg is 0.640884
 
 # For MegaM
 
-Precision for ham is 
-Precision for spam is 
+Precision for ham is 0.946859903382
+Precision for spam is 0.939024390244
 
-Recall for ham is 
-Recall for spam is 
+Recall for ham is 0.98
+Recall for spam is 0.848484848485
 
-F-score for ham is 
-F-score for spam is 
+F-score for ham is 0.963144963145
+F-score for spam is 0.891461649783
 
-Precision for pos is 
-Precision for neg is 
+Precision for pos is 0.8645833
+Precision for neg is 0.5652174
 
-Recall for pos is 
-Recall for neg is 
+Recall for pos is 0.6747967
+Recall for neg is 0.8
 
-F-score for pos is 
-F-score for neg is 
+F-score for pos is 0.7579908
+F-score for neg is 0.6624204 
 
 We can see that Precision, Recall, F-score almost all decrease comparing with using the whole train dataset (except the Recall for ham in Naive Bayes), 
 which means using more data can increase accuracy rate in some degree. It's because with more data we can get more information about the "real" model 
