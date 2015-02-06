@@ -104,14 +104,14 @@ F-score for ham is 0.954920019389
 F-score for spam is 0.859728506787
 
 
-# Precision for pos is 1
-# Precision for neg is 0.8666667
+Precision for pos is 1
+Precision for neg is 0.8666667
 
-# Recall for pos is 0.9186992
-# Recall for neg is 1
+Recall for pos is 0.9186992
+Recall for neg is 1
 
-# F-score for pos is 0.9576271
-# F-score for neg is 0.9285714
+F-score for pos is 0.9576271
+F-score for neg is 0.9285714
 
 
 # For SVM
