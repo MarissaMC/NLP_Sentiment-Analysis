@@ -1,11 +1,12 @@
 ------------------------------------------------------------------------------
 Created by Mengchun Wu, 2/4/2015
-# This homework aims at practice Naive Bayes algorithm.
-# For Part I, I used dictionary to store model information.
-# I didn't refer to special source but just basic python programming skill.
+## Motivation
+This homework aims at practice Naive Bayes algorithm.
+For Part I, I used dictionary to store model information.
+I didn't refer to special source but just basic python programming skill.
 ------------------------------------------------------------------------------
 
-Description of files:
+## Description of files:
 
 spam.nb : model file for spam dataset
 sentiment.nb : model file for sentiment dataset
@@ -21,8 +22,9 @@ sentiment.svm.model : model file for sentiment dataset using SVM
 spam.megam.model : model file for spam dataset using Megam
 sentiment.megam.model : model file for sentiment dataset using Megam
 
+## Code Example
 -------------------------------------------------------------------------------
-Answer for Part III
+## Answer for Part III
 -------------------------------------------------------------------------------
 # Question 1
 
