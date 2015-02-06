@@ -1,6 +1,3 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Sentiment Analysis Spam filter}
 ------------------------------------------------------------------------------
 Created by Mengchun Wu, 2/4/2015
 ## Motivation
@@ -11,6 +8,7 @@ I didn't refer to special source but just basic python programming skill.
 
 ## Description of files:
 
+-------------------------------------------------------------------------------
 Spam_generate.py : to generate the training file from the Spam training documents
 
 Sentiment_generate.py : to generate the training file from the Sentiment training documents
@@ -27,7 +25,7 @@ nblearn.py : use train dataset to build model
 
 nbclassify.py : use model to classify test dataset
 
-
+----------------------------------------------------------------------------------
 In part2:
 
 spam.svm.model : model file for spam dataset using SVM
@@ -39,27 +37,27 @@ spam.megam.model : model file for spam dataset using Megam
 sentiment.megam.model : model file for sentiment dataset using Megam
 -------------------------------------------------------------------------------
 ## Code Example
-
+---------------------------------------------------------------------------------
 Use Spam_generate.py to generate files like "SPAM.00001.txt" or "HAM.00001.txt" into training file like below:
 
 HAM subject : meeting today hi , could we have a meeting today . thank you . 
 
 SPAM subject : low rates click here to apply for new low rates do not miss this chance !
 
-
+-----------------------------------------------------------------------------------
 You can use Spam_generate.py in this way:
 
 python3 Spam_generate.py PATH/TO/FILES spam_train_file
 
 Sentiment.py is used in the same way to generate sentiment train file.
 
-
+------------------------------------------------------------------------------------
 To learn a classification model from the training data file:
 
 python3 nblearn.py TRAININGFILE MODELFILE
 
 where TRAININGFILE is the name of the training file, MODELFILE is the name of the file that will contain the model that your classifier will learn(for the spam dataset the file name should be spam.nb, and sentiment.nb for the sentiment dataset).
-
+-------------------------------------------------------------------------------
 
 Next we can classify files like:
 
@@ -71,7 +69,7 @@ FEATURE_21 FEATURE_22 ... FEATURE_2N
 
 FEATURE_M1 FEATURE_M2 ... FEATURE_MN 
 
-
+---------------------------------------------------------------------------------
 To classify a file with new documents, use nbclassify.py like below:
 
 python3 nbclassify.py MODELFILE TESTFILE
@@ -211,6 +209,3 @@ Recall for neg is
 F-score for pos is 
 F-score for neg is 
 
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
