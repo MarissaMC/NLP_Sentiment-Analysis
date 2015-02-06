@@ -56,7 +56,9 @@ To learn a classification model from the training data file:
 
 python3 nblearn.py TRAININGFILE MODELFILE
 
-where TRAININGFILE is the name of the training file, MODELFILE is the name of the file that will contain the model that your classifier will learn(for the spam dataset the file name should be spam.nb, and sentiment.nb for the sentiment dataset).
+where TRAININGFILE is the name of the training file, MODELFILE is the name of the file that will contain the model that your classifier will learn
+(for the spam dataset the file name should be spam.nb, and sentiment.nb for the sentiment dataset).
+
 -------------------------------------------------------------------------------
 
 Next we can classify files like:
