@@ -212,4 +212,5 @@ F-score for pos is
 F-score for neg is 
 
 We can see that Precision, Recall, F-score almost all decrease comparing with using the whole train dataset (except the Recall for ham in Naive Bayes), 
-which means using more data can increase accuracy rate in some degree. 
+which means using more data can increase accuracy rate in some degree. It's because with more data we can get more information about the "real" model 
+and thus get better prediction, when the train dataset we use is unbiased with the test dataset.
