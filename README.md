@@ -24,6 +24,7 @@ nblearn.py : use train dataset to build model
 
 nbclassify.py : use model to classify test dataset
 
+
 In part2:
 
 spam.svm.model : model file for spam dataset using SVM
@@ -42,17 +43,20 @@ HAM subject : meeting today hi , could we have a meeting today . thank you .
 
 SPAM subject : low rates click here to apply for new low rates do not miss this chance !
 
+
 You can use Spam_generate.py in this way:
 
 python3 Spam_generate.py PATH/TO/FILES spam_train_file
 
 Sentiment.py is used in the same way to generate sentiment train file.
 
+
 To learn a classification model from the training data file:
 
 python3 nblearn.py TRAININGFILE MODELFILE
 
 where TRAININGFILE is the name of the training file, MODELFILE is the name of the file that will contain the model that your classifier will learn(for the spam dataset the file name should be spam.nb, and sentiment.nb for the sentiment dataset).
+
 
 Next we can classify files like:
 
@@ -63,6 +67,7 @@ FEATURE_21 FEATURE_22 ... FEATURE_2N
 ... 
 
 FEATURE_M1 FEATURE_M2 ... FEATURE_MN 
+
 
 To classify a file with new documents, use nbclassify.py like below:
 
@@ -139,7 +144,7 @@ F-score for neg is 0.7482014
 
 # Question 3
 
-# If only 10% of the training data is used
+If only 10% of the training data is used
 
 # For Naive Bayes
 
