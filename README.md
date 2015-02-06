@@ -1,4 +1,4 @@
-------------------------------------------------------------------------------
+
 Created by Mengchun Wu, 2/4/2015
 ## Motivation
 This homework aims at practice Naive Bayes algorithm.
@@ -35,9 +35,11 @@ sentiment.svm.model : model file for sentiment dataset using SVM
 spam.megam.model : model file for spam dataset using Megam
 
 sentiment.megam.model : model file for sentiment dataset using Megam
+
 -------------------------------------------------------------------------------
 ## Code Example
 ---------------------------------------------------------------------------------
+
 Use Spam_generate.py to generate files like "SPAM.00001.txt" or "HAM.00001.txt" into training file like below:
 
 HAM subject : meeting today hi , could we have a meeting today . thank you . 
