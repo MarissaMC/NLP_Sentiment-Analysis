@@ -1,0 +1,48 @@
+The changes I have made include:
+
+## nblearn.py
+1 change the classes range from specified ['SPAM','HAM','POS','NEG'] to general classes.
+2 can deal with multiclass now
+3 change the format of model from one dictionary to nested dictionary.
+
+## nbclassify.py
+1 change the judge code according to the model changed in nblearn.py
+
+
+## README.md
+As the dev dataset for sentiment used before is 200, which is very small and may be biased, I use new sentiment.nb model to test 3457 instance and get the following result:
+Answer for Part III:
+Question 1
+Precision for pos is 0.970513472293
+Precision for neg is 0.967785234899
+
+Recall for pos is 0.975472662238
+Recall for neg is 0.961333333333
+
+F-score for pos is 0.972986748216
+F-score for neg is 0.964548494983
+
+# Question 2
+
+# For SVM
+
+Precision for pos is 0.900489396411
+Precision for neg is 0.813967861557
+
+Recall for pos is 0.846193152785
+Recall for neg is 0.878
+
+F-score for pos is 0.872497365648
+F-score for neg is 0.844772289929
+
+# Question 3
+# For Naive Bayes
+
+Precision for pos is 0.971518987342
+Precision for neg is 0.926329276105
+
+Recall for pos is 0.941236586612
+Recall for neg is 0.964
+
+F-score for pos is 0.956138074228
+F-score for neg is 0.944789284548
