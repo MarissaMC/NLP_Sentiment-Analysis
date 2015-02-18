@@ -95,14 +95,14 @@ F-score for ham is 0.980980980981
 F-score for spam is 0.947802197802
 
 
-Precision for pos is 1
-Precision for neg is 0.9558824
+Precision for pos is 0.970513472293
+Precision for neg is 0.967785234899
 
-Recall for pos is 0.9756098
-Recall for neg is 1
+Recall for pos is 0.975472662238
+Recall for neg is 0.961333333333
 
-F-score for pos is 0.9876543
-F-score for neg is 0.9774436
+F-score for pos is 0.972986748216
+F-score for neg is 0.964548494983
 
 # Question 2
 
@@ -117,14 +117,14 @@ Recall for spam is 0.972451790634
 F-score for ham is 0.988988988989
 F-score for spam is 0.96978021978
 
-Precision for pos is 0.9038462
-Precision for neg is 0.6547619
+Precision for pos is 0.900489396411
+Precision for neg is 0.813967861557
 
-Recall for pos is 0.7642276
-Recall for neg is 0.8461538
+Recall for pos is 0.846193152785
+Recall for neg is 0.878
 
-F-score for pos is 0.8281938
-F-score for neg is 0.738255
+F-score for pos is 0.872497365648
+F-score for neg is 0.844772289929
 
 
 # For MegaM
@@ -163,14 +163,14 @@ F-score for ham is 0.954920019389
 F-score for spam is 0.859728506787
 
 
-Precision for pos is 1
-Precision for neg is 0.8666667
+Precision for pos is 0.971518987342
+Precision for neg is 0.926329276105
 
-Recall for pos is 0.9186992
-Recall for neg is 1
+Recall for pos is 0.941236586612
+Recall for neg is 0.964
 
-F-score for pos is 0.9576271
-F-score for neg is 0.9285714
+F-score for pos is 0.956138074228
+F-score for neg is 0.944789284548
 
 
 # For SVM
