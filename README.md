@@ -138,14 +138,14 @@ Recall for spam is 0.8891966759
 F-score for ham is 0.967741935484
 F-score for spam is 0.908062234795
 
-Precision for pos is 0.8859649
-Precision for neg is 0.7027027
+Precision for pos is 0.855880728879
+Precision for neg is 0.752733900365
 
-Recall for pos is 0.8211382
-Recall for neg is 0.8
+Recall for pos is 0.792028615227
+Recall for neg is 0.826
 
-F-score for pos is 0.8523207
-F-score for neg is 0.7482014
+F-score for pos is 0.822717622081
+F-score for neg is 0.787666878576
 
 # Question 3
 
@@ -184,14 +184,14 @@ Recall for spam is 0.382920110193
 F-score for ham is 0.893809308631
 F-score for spam is 0.541910331384
 
-Precision for pos is 0.9027778
-Precision for neg is 0.5
+Precision for pos is 0.914655172414
+Precision for neg is 0.609925990422
 
-Recall for pos is 0.5284553
-Recall for neg is 0.8923077
+Recall for pos is 0.542156361778
+Recall for neg is 0.934
 
-F-score for pos is 0.6666667
-F-score for neg is 0.640884
+F-score for pos is 0.680782803978
+F-score for neg is 0.737951013958
 
 # For MegaM
 
@@ -204,14 +204,14 @@ Recall for spam is 0.848484848485
 F-score for ham is 0.963144963145
 F-score for spam is 0.891461649783
 
-Precision for pos is 0.8645833
-Precision for neg is 0.5652174
+Precision for pos is 0.802844214609
+Precision for neg is 0.625654450262
 
-Recall for pos is 0.6747967
-Recall for neg is 0.8
+Recall for pos is 0.634644864589
+Recall for neg is 0.796666666667
 
-F-score for pos is 0.7579908
-F-score for neg is 0.6624204 
+F-score for pos is 0.708904109589
+F-score for neg is 0.700879765396
 
 We can see that Precision, Recall, F-score almost all decrease comparing with using the whole train dataset (except the Recall for ham in Naive Bayes), 
 which means using more data can increase accuracy rate in some degree. It's because with more data we can get more information about the "real" model 
