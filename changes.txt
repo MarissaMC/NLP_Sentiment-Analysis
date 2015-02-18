@@ -8,6 +8,11 @@ The changes I have made include:
 ## nbclassify.py
 1 change the judge code according to the model changed in nblearn.py
 
+## spam.nb 
+1 changed due to nblearn.py's change
+
+## sentiment.nb
+1 changed due to nblearn.py's change
 
 ## README.md
 As the dev dataset for sentiment used before is 200, which is very small and may be biased, I use new sentiment.nb model to test 3457 instance and get the following result:
