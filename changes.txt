@@ -28,7 +28,6 @@ F-score for pos is 0.972986748216
 F-score for neg is 0.964548494983
 
 # Question 2
-
 # For SVM
 
 Precision for pos is 0.900489396411
@@ -39,6 +38,17 @@ Recall for neg is 0.878
 
 F-score for pos is 0.872497365648
 F-score for neg is 0.844772289929
+
+# For Megam
+
+Precision for pos is 0.855880728879
+Precision for neg is 0.752733900365
+
+Recall for pos is 0.792028615227
+Recall for neg is 0.826
+
+F-score for pos is 0.822717622081
+F-score for neg is 0.787666878576
 
 # Question 3
 # For Naive Bayes
@@ -51,3 +61,25 @@ Recall for neg is 0.964
 
 F-score for pos is 0.956138074228
 F-score for neg is 0.944789284548
+
+# For SVM
+
+Precision for pos is 0.914655172414
+Precision for neg is 0.609925990422
+
+Recall for pos is 0.542156361778
+Recall for neg is 0.934
+
+F-score for pos is 0.680782803978
+F-score for neg is 0.737951013958
+
+# For Megam
+
+Precision for pos is 0.802844214609
+Precision for neg is 0.625654450262
+
+Recall for pos is 0.634644864589
+Recall for neg is 0.796666666667
+
+F-score for pos is 0.708904109589
+F-score for neg is 0.700879765396
