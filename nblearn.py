@@ -1,110 +1,73 @@
 import sys
 import re, string
 
-
 input = sys.argv[1]
 output = sys.argv[2]
 
 from collections import defaultdict
 import json
 
-HAM_data_o=[]
-SPAM_data_o=[] 
-HAM_data=[]
-SPAM_data=[] 
+# find the number of classes
+total_class=[]
+input1=open(input,'r',errors='ignore')
 
-# add switch to judge sentiment and spam
-switch=0
+n_file=0     # number of files
+for sen in input1:
+    cl=sen.split()[0]
+    total_class.append(cl)
+    n_file+=1
 
-with open(input,'r') as f:
-    for line in f:
-        if line[0]=='H' or line[0]=='P':
-        	HAM_data_o.append(line)
-        if line[0]=='S' or line[0]=='N':
-            SPAM_data_o.append(line)
-            if line[0]=='N':
-                switch=1
+Class=set(total_class)
+length=len(Class)
 
-# calculate P(class)
+dic=defaultdict()
+dic['N_rank']={}
 
-P_ham = float(len(HAM_data_o))/float(len(HAM_data_o)+len(SPAM_data_o))
-P_spam = 1 - P_ham
+r=0
+for c in Class:
+    dic['N_rank'][c]=r
+    r+=1
 
-for sent in HAM_data_o:
-    HAM_data+=sent.split()
+dic['Num_class']=[0]*length
 
-# number of words in ham
-d_ham_sum=len(HAM_data)
+input2=open(input,'r',errors='ignore')
+for sen in input2:
+    cl=sen.split()[0]
+    r_c=dic['N_rank'][cl]
+    dic['Num_class'][r_c]+=1
 
-for sent in SPAM_data_o:
-    SPAM_data+=sent.split()
-
-d_spam_sum=len(SPAM_data)
-
-# start calculate frequency
-# dict
-
-# delete punctuation
-pun = set(string.punctuation)
-pun = pun.difference('$')
-# delete part of preposition
-pre = set(['are','the','this','that','and','ect','with','under','from','for','HAM','SPAM','you','your','her','his','him','Subject:','Subject','has','have','already','had','mean','some','been','our','hello','june','off','being','then','here','there','such','where','who','when','which','its','into','how','may','upon'])
-verb=set(['provide','run','including','not','will','any','what','were','did','didn','done'])
-month=set(['march','october','oct','november','nov','july','week','august','day','tuesday','monday','wednesday','thursday','friday','year','years','after','along','summer','december','january'])
-nun=set(['information','jones','smith','jeffrey','other','joe','they','james','jim','their','them','europe','india','mary','canada','sally','london','mike','jeff','bob','john'])
-
-# exception in dic
-pun.update(pre,verb,month,nun)
-
-d_ham = defaultdict(int)
-for word in HAM_data:
-    if word not in pun and not str(word).isdigit() and len(word)>2:
-        d_ham[word] += 1
+    for word in sen.split():
+        if word in dic:
+           dic[word][r_c]+=1
+        if word not in dic:
+           dic[word]=[0]*length
+           dic[word][r_c]=1
 
 
-d_spam = defaultdict(int)
-for word in SPAM_data:
-    if word not in pun and not str(word).isdigit() and len(word)>2:
-        d_spam[word] += 1 
 
+# smoothing
+dic_final=defaultdict()
 
-# clean dic
-dn_ham=defaultdict(int)
-dn_spam=defaultdict(int)
+for w in dic:
+    judge=0
+    if w!='N_rank' and w!='Num_class' and w!='Num_Work_class':
+       for i in range(length):
+           if dic[w][i]==0:
+              dic[w][i]=1
 
-# buffer dic
-b_dic=dict(list(d_ham.items())+list(d_spam.items()))
+           judge+=dic[w][i]
+       if judge>60:      # delete words with less frequency
+          dic_final[w]=dic[w]    
 
-for i in b_dic:
-    if d_ham[i]+d_spam[i]>50:
-        new_h='h_'+i
-        new_s='s_'+i
-        dn_ham[new_h]=d_ham[i]
-        dn_spam[new_s]=d_spam[i]
+# P_class
+for c in Class:
+    r_c=dic['N_rank'][c]
+    dic['Num_class'][r_c]=dic['Num_class'][r_c]/float(n_file)
 
-for j in dn_ham:
-    if dn_ham[j]==0:
-        dn_ham[j]=1
+dic_final['N_rank']=dic['N_rank']
+dic_final['Num_class']=dic['Num_class']
 
-for j in dn_spam:
-    if dn_spam[j]==0:
-        dn_spam[j]=1
-
-dn_ham['num_ham']=d_ham_sum
-dn_ham['num_spam']=d_spam_sum
-dn_ham['pro_ham']=P_ham
-dn_ham['pro_spam']=P_spam
-
-if switch==1:
-    dn_ham['switch']=1
-
-new_dict=dict(list(dn_ham.items())+list(dn_spam.items()))
 
 # write into spam.nb
-json.dump(new_dict, open(output,'w'))
-
-
-# Naive Bayes
-
-# d_ham=d_ham/d_spam_sum
+json.dump(dic_final, open(output,'w'))
 
