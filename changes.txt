@@ -14,6 +14,12 @@ The changes I have made include:
 ## sentiment.nb
 1 changed due to nblearn.py's change
 
+## spam.out
+1 even though the result of spam test dataset using revised nblearn.py, nbclassify looks very similar to original one, to gurantee consistency I update it using the newest code.
+
+## sentiment.out
+1 even though the result of sentiment test dataset using revised nblearn.py, nbclassify looks very similar to original one, to gurantee consistency I update it using the newest code.
+
 ## README.md
 As the dev dataset for sentiment used before is 200, which is very small and may be biased, I use new sentiment.nb model to test 3457 instance and get the following result:
 Answer for Part III:
