@@ -5,13 +5,14 @@ import operator
 
 model = sys.argv[1]
 testfile = sys.argv[2]
-#output=sys.argv[3]
 
 from collections import defaultdict
 import json
 
 dic = json.load(open(model))
 
+pun = set(string.punctuation)
+pun = pun.difference('$')
 
 # P_wc
 length=len(dic['N_rank'])
@@ -38,10 +39,23 @@ with open(testfile,'r',errors='ignore') as f:
          for c in dic['N_rank']:
              r_c=dic['N_rank'][c]
              judge[c]=math.log(dic['Num_class'][r_c])
+         
+             len_dw=0
+             len_nw=0
+
              for word in line.split():
+                 if word not in dic and word not in pun:
+                    len_nw+=1
                  if word in dic:
+                    len_dw+=1
+
                     judge[c]+=math.log(dic[word][r_c])
-          
+
+             # For special case in spam
+         if len_dw/float(len_dw+len_nw)<0.5 and 'SPAM' in dic['N_rank']:       
+            judge['SPAM']=1
+
+
          sys.stdout.write(max(judge, key=judge.get))
          sys.stdout.write('\n')
  
